@@ -11,15 +11,29 @@ export class AppComponent implements OnInit {
       throw new Error('Method not implemented.');
     }
 
+    titulo = 'Juan';
 
-    peliculas =
+    peliculasEnCines =
       [{
-        title: 'Spiderman',
+        title: 'Lion King',
         fechaLanzamiento: new Date(),
         precio: 100
       },
       {
         title: 'Spiderman',
+        fechaLanzamiento: new Date(),
+        precio: 100
+      }
+    ];
+
+    peliculasProximosEstrenos =
+      [{
+        title: 'Transformer',
+        fechaLanzamiento: new Date(),
+        precio: 100
+      },
+      {
+        title: 'Avengers EndGame',
         fechaLanzamiento: new Date(),
         precio: 100
       }
