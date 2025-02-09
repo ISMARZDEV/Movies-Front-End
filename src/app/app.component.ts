@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Front-End';
+
+
+    peliculas =
+      [{
+        title: 'Spiderman',
+        fechaLanzamiento: new Date(),
+        precio: 100
+      },
+      {
+        title: 'Spiderman',
+        fechaLanzamiento: new Date(),
+        precio: 100
+      }
+    ];
+
 }
