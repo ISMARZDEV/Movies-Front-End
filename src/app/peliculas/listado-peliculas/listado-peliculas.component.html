@@ -1,2 +1,12 @@
-<p>listado-peliculas works!</p>
 
+<div *ngIf="peliculas?.length === 0">
+  <p>No hay pelicula para mostrar</p>
+</div>
+
+<div *ngIf="peliculas && peliculas?.length > 0">
+  <div *ngFor="let pelicula of peliculas; let index = index" class="pelicula-contenedor">
+    <div>Pelicula: {{index}} {{pelicula.title}}</div>
+    <div>{{pelicula.fechaLanzamiento | date: "dd-mm-yyy"}}</div>
+    <div>{{pelicula.precio}}</div>
+  </div>
+</div>

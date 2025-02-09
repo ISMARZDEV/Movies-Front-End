@@ -7,7 +7,15 @@ import { Component } from '@angular/core';
 })
 export class ListadoPeliculasComponent {
 
-  peliculas = {
-    
-  }
+  peliculas =
+  [{
+    title: 'Spiderman',
+    fechaLanzamiento: new Date(),
+    precio: 100
+  },
+  {
+    title: 'Spiderman',
+    fechaLanzamiento: new Date(),
+    precio: 100
+  }];
 }
