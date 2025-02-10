@@ -1,13 +1,22 @@
-<div *ngIf="peliculas?.length === 0">
-  <p>No hay pelicula para mostrar</p>
-</div>
+<app-listado-generico [listado]="peliculas">
+  
+  <ng-container vacio>
+    <div>Mensaje Personalizado para Contenido Vacio</div>
+  </ng-container>
 
-
-<ng-container *ngIf="peliculas && peliculas?.length > 0">
-  <div *ngFor="let pelicula of peliculas; let index = index" class="pelicula-contenedor">
-    <div>Pelicula: {{index}} {{pelicula.title}} <button (click)="remover(index)" style="margin-left: 1rem;">Remover</button></div>
-    <div>{{pelicula.fechaLanzamiento | date: "dd-mm-yyy"}}</div>
-    <div>{{pelicula.precio}}</div>
-  </div>
-</ng-container>
-
+  <ng-container contenido>
+    <div
+      *ngFor="let pelicula of peliculas; let index = index"
+      class="pelicula-contenedor"
+    >
+      <div>
+        Pelicula: {{ index }} {{ pelicula.title }}
+        <button (click)="remover(index)" style="margin-left: 1rem">
+          Remover
+        </button>
+      </div>
+      <div>{{ pelicula.fechaLanzamiento | date : "dd-mm-yyy" }}</div>
+      <div>{{ pelicula.precio }}</div>
+    </div>
+  </ng-container>
+</app-listado-generico>
